@@ -14,7 +14,7 @@ function ResetPassword() {
     const emailvalue=e.target.email.value;
     sendPasswordResetEmail(auth,emailvalue).then(data=>{
       toast.success(`check your email :- ${emailvalue}`)
-      navigate('/')
+      navigate('/login')
     }).catch(err=>{
       alert(err.code)
     })
