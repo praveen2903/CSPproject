@@ -13,8 +13,8 @@ import {
   CardBody,
   Typography,
 } from "@material-tailwind/react";
-import { Link } from 'react-router-dom'
 import { fadeIn } from '../Variants'
+import NavPickup from './NavPickup'
 
 function PickupForm() {
   const [file,setFile]=useState(null)
@@ -79,13 +79,7 @@ function PickupForm() {
 
   return (
     <div>
-      <div className='absolute right-3 top-3'>
-        <Link to="/">
-          <button className='rounded-full py-2 px-4 bg-[#1d4ed8] transiton-all duration-300 hover:text-white hover:bg-indigo-600'>
-              logout
-          </button>
-        </Link>
-      </div>
+      <NavPickup/>
       <div className='text-center mt-10'>
         <form className='flex items-center flex-col gap-10'>
           <motion.div variants={fadeIn("right",0.3)} initial="hidden" whileInView={"show"} viewport={{once:false,amount:0.3}} className='flex gap-5'>
